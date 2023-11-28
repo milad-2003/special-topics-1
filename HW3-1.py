@@ -17,3 +17,9 @@ aBAcAba
 خروجی نمونه:
 .b.c.b
 """
+
+vowel_letters = "aeiou"
+word = input("Enter a word: ").lower()
+result_arr = [x for x in word if x not in vowel_letters]
+if result_arr:
+    print("." + ".".join(result_arr))
