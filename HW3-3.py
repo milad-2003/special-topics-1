@@ -24,3 +24,11 @@ Mohamadali
 Jamshid
 """
 
+names = input("Enter the names, separated with spaces: ")
+names_list = names.split(" ")
+final_list = []
+for name in names_list:
+    word_list = [x for x in name.lower()]
+    word_list[0] = word_list[0].upper()
+    final_list.append("".join(word_list))
+print("\n".join(final_list))
