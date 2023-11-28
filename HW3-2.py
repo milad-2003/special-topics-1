@@ -18,3 +18,6 @@
 1+1+1+3+3
 """
 
+user_input = input("Enter the operation: ")
+input_arr = sorted(user_input.split("+"))
+print("+".join(input_arr))
