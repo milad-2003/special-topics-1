@@ -23,3 +23,13 @@ hlelo
 NO
 """
 
+word = input("Enter the word: ")
+index = 0
+result = "NO"
+for letter in word:
+    if letter == "hello"[index]:
+        index += 1
+        if index == 5:
+            result = "YES"
+            break
+print(result)
