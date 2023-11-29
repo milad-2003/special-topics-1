@@ -18,3 +18,9 @@ tehran
 not palindrome
 """
 
+word = input("Enter the word here: ").lower()
+reversed_word = word[::-1]
+if word == reversed_word:
+    print("palindrome")
+else:
+    print("not palindrome")
