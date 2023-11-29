@@ -12,3 +12,17 @@
 
 را دقیقا به همین شکل با حروف بزرگ در خروجی چاپ کنید NO و YES
 """
+
+user_input = input("Enter the string: ")
+
+answer = "NO"
+
+if "AB" in user_input:
+    if "BA" in user_input[user_input.index("AB") + 2:]:
+        answer = "YES"
+
+if "BA" in user_input:
+    if "AB" in user_input[user_input.index("BA") + 2:]:
+        answer = "YES"
+
+print(answer)
