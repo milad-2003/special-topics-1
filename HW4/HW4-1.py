@@ -20,3 +20,10 @@
 4
 """
 
+locations = input("Enter three numbers for x1, x2 and x3, separated with spaces: ")
+locations_list = sorted([float(x) for x in locations.split(" ")])
+result = (locations_list[1] - locations_list[0]) + (locations_list[2] - locations_list[1])
+if result == int(result):
+    print(int(result))
+else:
+    print(result)
