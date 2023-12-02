@@ -28,3 +28,7 @@
 لازم نیست تعداد حالت یا جایگشت ها را حساب کنید. 
 """
 
+# No need to get the first input
+num_of_games = input("Enter the number of each player's games, separated with spaces: ")
+list_of_games = [int(x) for x in num_of_games.split(" ") if int(x) <= 2]
+print(len(list_of_games) // 3)
