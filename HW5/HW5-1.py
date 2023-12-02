@@ -26,3 +26,17 @@ uk: 1
 usa: 3
 """
 
+num_of_votes = int(input("Enter the total number of votes: "))
+
+list_of_votes = []
+for _ in range(num_of_votes):
+    list_of_votes.append(input())
+
+list_of_votes.sort()
+
+result_dict = {}
+for vote in list_of_votes:
+    result_dict[vote] = result_dict.get(vote, 0) + 1
+
+for k, v in result_dict.items():
+    print(f"{k}: {v}")
