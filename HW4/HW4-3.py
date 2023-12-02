@@ -37,3 +37,20 @@ happy irsa
 poor irsa
 """
 
+def status(arr):
+    status = "poor"
+    for i in arr:
+        for j in arr:
+            if i[0] < j[0] and i[1] > j[1]:
+                status = "happy"
+                return status
+    return status
+
+num_of_laptops = int(input("Enter the number of laptops: "))
+
+list_of_laptops = []
+for _ in range(num_of_laptops):
+    laptop = input()
+    list_of_laptops.append([int(x) for x in laptop.split(" ")])
+
+print(status(list_of_laptops) + " irsa")
