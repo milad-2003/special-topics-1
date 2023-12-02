@@ -24,3 +24,18 @@ we say goodbye to you tonight
 ma goftan khodafez to shoma tonight
 """
 
+num_of_words = int(input("Enter the number of words: "))
+
+my_dict = {}
+for _ in range(num_of_words):
+    word_meaning = input().split(" ")
+    my_dict[word_meaning[0]] = word_meaning[1]
+
+sentence = input("Enter the sentence to be translated: ")
+words_of_sentence = sentence.split(" ")
+
+for word in words_of_sentence:
+    if word in my_dict:
+        print(my_dict[word], end=" ")
+    else:
+        print(word, end=" ")
