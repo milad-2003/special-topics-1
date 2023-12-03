@@ -10,3 +10,56 @@ hosein - mazyar - akbar - nima - mahdi - farhad - mohammad - khashayar - milad -
 pouya - pourya - reza - ali - behzad - soheil - behrooz - shahrooz - saman - mohsen
 """
 
+import random
+
+
+class Person:
+
+    def __init__(self, name):
+        self.name = name
+
+    
+    def introduce(self):
+        print(f"Hello; My name is {self.name}!")
+
+
+class Player(Person):
+
+    nationality = "Iran"
+
+    team = ""
+
+
+players_list = [
+    Player("hosein"),
+    Player("mazyar"),
+    Player("adbar"),
+    Player("nima"),
+    Player("mahdi"),
+    Player("farhad"),
+    Player("mohammad"),
+    Player("khashayar"),
+    Player("milad"),
+    Player("mostafa"),
+    Player("amin"),
+    Player("saeed"),
+    Player("pouya"),
+    Player("pourya"),
+    Player("reza"),
+    Player("ali"),
+    Player("behzad"),
+    Player("soheil"),
+    Player("behrooz"),
+    Player("shahrooz"),
+    Player("saman"),
+    Player("mohsen"),
+]
+
+random.shuffle(players_list)
+
+for player in players_list:
+    if players_list.index(player) < len(players_list) // 2:
+        player.team = "A"
+    else:
+        player.team = "B"
+    print(f"Name: {player.name} === Team: {player.team}")
