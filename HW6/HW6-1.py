@@ -34,3 +34,36 @@ B را وارد کنید و سپس اطلاعات کلاس A در ابتدا ت�
 A
 """
 
+
+class Class:
+    def __init__(self, num_of_students):
+        self.num_of_students = num_of_students
+        self.ages = [int(age) for age in input().split(" ")]
+        self.heights = [int(height) for height in input().split(" ")]
+        self.weights = [int(weight) for weight in input().split(" ")]
+        self.average_age = sum(self.ages) / float(self.num_of_students)
+        self.average_height = sum(self.heights) / float(self.num_of_students)
+        self.average_weight = sum(self.weights) / float(self.num_of_students)
+    
+
+class_a = Class(input("Enter the information of class A:\n"))
+class_b = Class(input("Enter the information of class B:\n"))
+
+result_str = "Same"
+if class_a.average_height > class_b.average_height:
+    result_str = "A"
+elif class_b.average_height > class_a.average_height:
+    result_str = "B"
+elif class_a.average_weight < class_b.average_weight:
+    result_str = "A"
+elif class_b.average_weight < class_a.average_weight:
+    result_str = "B"
+
+print("\n")
+print(class_a.average_age)
+print(class_a.average_height)
+print(class_a.average_weight)
+print(class_b.average_age)
+print(class_b.average_height)
+print(class_b.average_weight)
+print(result_str)
